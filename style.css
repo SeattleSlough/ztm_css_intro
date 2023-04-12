@@ -1,0 +1,37 @@
+/* Property Selector
+Property: value; 
+
+REMEMBER - cascading means last Property value wins
+*/
+body {
+	background-image: url(background.jpg);
+	background-size: cover;
+}
+
+h2,
+p {
+	color: #aa4139;
+	text-align: center;
+	border: 5px solid rgba(255, 176, 170, 0.5);
+	cursor: pointer;
+}
+
+p {
+	color: green;
+}
+
+li {
+	list-style: none;
+	display: inline-block;
+}
+
+/* this is how we select based on class */
+
+.webtext {
+	border: 5px dashed green;
+}
+
+/* this will pick up the 'active' in the first <p> tag in the index.html file.  IOW, it applies .webtext to any class with 'webtext' text and then adds/overrides those with 'active' as well ('webtext active' in this case). */
+.active {
+	color: red;
+}
