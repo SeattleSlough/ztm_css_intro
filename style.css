@@ -3,7 +3,16 @@ Property: value;
 
 !important (not recommended)
 
-REMEMBER - cascading means last Property value wins
+REMEMBER - cascading means styling specifications can be overwritten.  It all depends on three things:
+1) Specificity
+	- score increases based on how specific
+	- use a specificity calculator to see scoring 
+	- Ex: h4 has a lower score h4 > p which is lower than h4 > p #blue .food
+	- inline styling always wins out
+2) Importance
+3) The source order
+	- Source = the stylesheet referenced in the html file <link=stylsheet...>
+	- Last source file referenced takes the first bite
 */
 
 /* ---------------------------------------
