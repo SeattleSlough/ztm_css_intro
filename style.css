@@ -1,13 +1,28 @@
 /* Property Selector
 Property: value; 
 
+Of Note:
+.class
+#id
+*
+element
+element, element
+element element
+element > element
+element + element
+:hover
+:first-child
+!important (not recommended)
+
 REMEMBER - cascading means last Property value wins
 */
+
 body {
 	background-image: url(background.jpg);
 	background-size: cover;
 }
 
+/* element, element groups the CSS values, here h2 and p.  IOW the comma is read as AND */
 h2,
 p {
 	color: #aa4139;
@@ -25,7 +40,7 @@ li {
 	display: inline-block;
 }
 
-/* this is how we select based on class */
+/* class (.) */
 
 .webtext {
 	border: 5px dashed green;
@@ -35,3 +50,35 @@ li {
 .active {
 	color: red;
 }
+
+/* id (#) */
+#div1 {
+	background: rgba(0, 0, 255, 0.2);
+}
+#div2 {
+	background: rgba(255, 0, 0, 0.2);
+}
+
+/* star (*)
+means "ALL ELEMENTS" except that will be overridden where something is otherwise specfied*/
+* {
+	text-align: right;
+}
+/* note in the resulting web page, the h2 an p elements are still centered because they are specifically called out to be in thier CSS */
+
+/* 
+ELEMENT ELEMENT targets all elements (the 2nd argument) wrapped within another element (the 1st argument)
+
+h2 p {} is saying 'all p tags inside an h2 */
+
+h2,
+p {
+	color: #aa4139;
+	text-align: center;
+	border: 5px solid rgba(255, 176, 170, 0.5);
+	cursor: pointer;
+}
+/*
+Reads On: <h2><p>impsum lorem</p></h2>
+Doesn't Read On: <h2>Lorem Impsum</h2><p>some text</p> (p tag is NOT wrapped by h2 tag)
+ */
