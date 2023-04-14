@@ -3,7 +3,7 @@
 }
 
 body {
-	background-image: url(background.jpg);
+	background-image: url(mykonos.jpg);
 	background-size: cover;
 }
 
@@ -11,7 +11,7 @@ h2 {
 	color: red;
 }
 
-h2 + p {
+p {
 	/* color: #aa4139; */
 	color: black;
 	text-align: center;
@@ -22,11 +22,20 @@ h2 + p {
 p {
 	/* text-decoration: green wavy underline;
 	text-transform: lowercase; */
-	line-height: 50px;
+	line-height: 36px;
 	font-style: Bold;
 	font-weight: 700;
-	font-size: 48px;
+	font-size: 24px;
 	font-family: "Tangerine", cursive;
+}
+
+img {
+	float: left;
+}
+
+footer {
+	clear: both;
+	text-align: center;
 }
 
 li {
