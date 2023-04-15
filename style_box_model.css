@@ -1,58 +1,32 @@
-* {
-	text-align: right;
-}
-
-body {
-	background-image: url(mykonos.jpg);
-	background-size: cover;
-}
-
 h2 {
-	color: red;
+	color: blue;
 }
 
-p {
-	/* color: #aa4139; */
-	color: black;
+.boxmodel {
 	text-align: center;
-	border: 5px solid rgba(255, 176, 170, 0.5);
-	cursor: pointer;
-}
-
-p {
-	/* text-decoration: green wavy underline;
-	text-transform: lowercase; */
-	line-height: 36px;
-	font-style: Bold;
-	font-weight: 700;
-	font-size: 24px;
-	font-family: "Tangerine", cursive;
-}
-
-img {
-	float: left;
-}
-
-footer {
-	clear: both;
-	text-align: center;
-}
-
-li {
-	list-style: none;
+	border: 5px solid red;
 	display: inline-block;
+	/* padding: 20px; -- this applies to all sides*/
+	padding: 5px 20px 5px 20px;
+	/* padding: to define specific sides as above go --> top, right, bottom, left */
+	/* margin: 20px; as wtih padding, a single number applies to all sides*/
+	/* margin: 0px, 20px, 0px, 20px; each side specified T, R, B, L*/
+	margin: 0px, 20px;
+	/* this is short hand which will get applied to B L as well */
+	height: 24px;
+	width: 36px;
+	/* height: and width: apply to the dimensions on the inner most box in the developer view */
 }
 
-.webtext {
-	border: 5px dashed green;
-}
-.active {
-	color: red;
+/* --- px VS em VS rem ----- */
+/* px is an absolute unit */
+/* em is a relatative multiplier of px (5em text in a 10px block will read as 50px) */
+/* rem is a relative multiplier of the root element, in this case HTML.  Browsers generally use a font size of 16px so a 2rem value likely yields a 32px font. */
+
+p {
+	font-size: 10px;
 }
 
-#div1 {
-	background: rgba(0, 0, 255, 0.2);
-}
-#div2 {
-	background: rgba(255, 0, 0, 0.2);
+span {
+	font-size: 2em;
 }
